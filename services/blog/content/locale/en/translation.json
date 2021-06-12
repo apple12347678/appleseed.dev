@@ -1,0 +1,12 @@
+{
+  "404.message": "You just hit a route that doesn't exist... the sadness.",
+  "500.message": "Something went wrong... Sorry for the inconvenience.",
+  "index.title": "A dev blog of <0>appleseed</0>",
+  "index.introduction": "I am appleseed, a junior developer. I enjoy writing in React, TypeScript and Express.",
+  "index.nopost": "No posts currently available.",
+  "abstract.timeToRead": "{{ timeToRead }} min read",
+  "ccl.alt": "Creative Commons License",
+  "ccl.description": "This work is licensed under a <0>Creative Commons Attribution-ShareAlike 4.0 International License</0>.",
+  "word.next": "Next",
+  "word.prev": "Prev"
+}
