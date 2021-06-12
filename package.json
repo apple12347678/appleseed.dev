@@ -13,6 +13,7 @@
     "typescript": "^4.3.2"
   },
   "workspaces": [
-    "services/*"
+    "services/*",
+    "packages/*"
   ]
 }

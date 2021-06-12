@@ -10,9 +10,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v2
         with:
           node-version: 14.x
       - run: yarn
-      - run: yarn workspaces since run typecheck
-      - run: yarn workspaces since run deploy
+      - run: yarn workspaces since run typecheck $(git rev-parse HEAD~1)
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-northeast-2
+      - run: yarn
+      - run: yarn workspaces since run --include="services/*" build $(git rev-parse HEAD~1)
+      - run: yarn workspaces since run --include="services/*" deploy $(git rev-parse HEAD~1)

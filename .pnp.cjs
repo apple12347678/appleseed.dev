@@ -23,6 +23,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:."
       },
       {
+        "name": "deploy-aws",
+        "reference": "workspace:packages/deploy-aws"
+      },
+      {
         "name": "blog",
         "reference": "workspace:services/blog"
       },
@@ -36,6 +40,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "fallbackExclusionList": [
       ["appleseed.dev", ["workspace:."]],
       ["blog", ["workspace:services/blog"]],
+      ["deploy-aws", ["workspace:packages/deploy-aws"]],
       ["home", ["workspace:services/home"]]
     ],
     "fallbackPool": [
@@ -5613,6 +5618,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/yargs-parser", "npm:20.2.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:17.0.0", {
+          "packageLocation": "./.yarn/cache/@types-yargs-npm-17.0.0-ed47fa4077-a9963dd351.zip/node_modules/@types/yargs/",
+          "packageDependencies": [
+            ["@types/yargs", "npm:17.0.0"],
+            ["@types/yargs-parser", "npm:20.2.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["@types/yargs-parser", [
@@ -7444,6 +7457,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:17.0.7"],
             ["@types/react-helmet", "npm:6.1.1"],
             ["@types/uuid", "npm:8.3.0"],
+            ["deploy-aws", "workspace:packages/deploy-aws"],
             ["dotenv", "npm:10.0.0"],
             ["gatsby", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:3.7.1"],
             ["gatsby-plugin-emotion", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:6.7.1"],
@@ -7479,7 +7493,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-helmet", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:6.1.0"],
             ["react-i18next", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:11.10.0"],
             ["svg-react-loader", "npm:0.4.6"],
-            ["ts-node", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:10.0.0"],
+            ["ts-node", "virtual:281994f9a629235a2ed0e30e435db04dcc7e9117902d3d6edde6fe1a95f041e55fd7929ffc1ef187b257eb7ed50e0b75ea0bada2e0ebce35beda1312a1264e19#npm:10.0.0"],
             ["typescript", "patch:typescript@npm%3A4.3.2#~builtin<compat/typescript>::version=4.3.2&hash=d8b4e7"],
             ["uuid", "npm:8.3.2"]
           ],
@@ -9824,6 +9838,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["deploy-aws", [
+        ["workspace:packages/deploy-aws", {
+          "packageLocation": "./packages/deploy-aws/",
+          "packageDependencies": [
+            ["deploy-aws", "workspace:packages/deploy-aws"],
+            ["@types/node", "npm:15.12.2"],
+            ["@types/yargs", "npm:17.0.0"],
+            ["execa", "npm:5.1.1"],
+            ["ts-node", "virtual:281994f9a629235a2ed0e30e435db04dcc7e9117902d3d6edde6fe1a95f041e55fd7929ffc1ef187b257eb7ed50e0b75ea0bada2e0ebce35beda1312a1264e19#npm:10.0.0"],
+            ["typescript", "patch:typescript@npm%3A4.3.2#~builtin<compat/typescript>::version=4.3.2&hash=d8b4e7"],
+            ["yargs", "npm:17.0.1"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
       ["destroy", [
         ["npm:1.0.4", {
           "packageLocation": "./.yarn/cache/destroy-npm-1.0.4-a2203e01cb-da9ab4961d.zip/node_modules/destroy/",
@@ -11301,6 +11330,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cross-spawn", "npm:7.0.3"],
             ["get-stream", "npm:5.2.0"],
             ["human-signals", "npm:1.1.1"],
+            ["is-stream", "npm:2.0.0"],
+            ["merge-stream", "npm:2.0.0"],
+            ["npm-run-path", "npm:4.0.1"],
+            ["onetime", "npm:5.1.2"],
+            ["signal-exit", "npm:3.0.3"],
+            ["strip-final-newline", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:5.1.1", {
+          "packageLocation": "./.yarn/cache/execa-npm-5.1.1-191347acf5-fba9022c8c.zip/node_modules/execa/",
+          "packageDependencies": [
+            ["execa", "npm:5.1.1"],
+            ["cross-spawn", "npm:7.0.3"],
+            ["get-stream", "npm:6.0.1"],
+            ["human-signals", "npm:2.1.0"],
             ["is-stream", "npm:2.0.0"],
             ["merge-stream", "npm:2.0.0"],
             ["npm-run-path", "npm:4.0.1"],
@@ -13741,6 +13786,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pump", "npm:3.0.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:6.0.1", {
+          "packageLocation": "./.yarn/cache/get-stream-npm-6.0.1-83e51a4642-e04ecece32.zip/node_modules/get-stream/",
+          "packageDependencies": [
+            ["get-stream", "npm:6.0.1"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["get-value", [
@@ -14669,6 +14721,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:15.12.2"],
             ["@types/react", "npm:17.0.11"],
             ["@types/react-dom", "npm:17.0.7"],
+            ["deploy-aws", "workspace:packages/deploy-aws"],
             ["gatsby", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:3.7.1"],
             ["gatsby-plugin-emotion", "virtual:67334350be407b193cf2186cf648d08129d68a35c1b48349bb0094951510cb3391a8779e95b8c1c886b833a1eac4a3baa1dc8a981c0dbd235a47b0ca4f7f6030#npm:6.7.1"],
             ["gatsby-plugin-graphql-codegen", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:3.0.0"],
@@ -14691,7 +14744,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-helmet", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:6.1.0"],
             ["react-i18next", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:11.10.0"],
             ["svg-react-loader", "npm:0.4.6"],
-            ["ts-node", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:10.0.0"],
+            ["ts-node", "virtual:281994f9a629235a2ed0e30e435db04dcc7e9117902d3d6edde6fe1a95f041e55fd7929ffc1ef187b257eb7ed50e0b75ea0bada2e0ebce35beda1312a1264e19#npm:10.0.0"],
             ["typescript", "patch:typescript@npm%3A4.3.2#~builtin<compat/typescript>::version=4.3.2&hash=d8b4e7"]
           ],
           "linkType": "SOFT",
@@ -14953,6 +15006,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/human-signals-npm-1.1.1-616b2586c2-d587647c9e.zip/node_modules/human-signals/",
           "packageDependencies": [
             ["human-signals", "npm:1.1.1"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:2.1.0", {
+          "packageLocation": "./.yarn/cache/human-signals-npm-2.1.0-f75815481d-b87fd89fce.zip/node_modules/human-signals/",
+          "packageDependencies": [
+            ["human-signals", "npm:2.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -24684,10 +24744,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:10.0.0", {
-          "packageLocation": "./.yarn/__virtual__/ts-node-virtual-9efb61ff66/0/cache/ts-node-npm-10.0.0-9c3d77d0a0-96d633774e.zip/node_modules/ts-node/",
+        ["virtual:281994f9a629235a2ed0e30e435db04dcc7e9117902d3d6edde6fe1a95f041e55fd7929ffc1ef187b257eb7ed50e0b75ea0bada2e0ebce35beda1312a1264e19#npm:10.0.0", {
+          "packageLocation": "./.yarn/__virtual__/ts-node-virtual-be2e63b033/0/cache/ts-node-npm-10.0.0-9c3d77d0a0-96d633774e.zip/node_modules/ts-node/",
           "packageDependencies": [
-            ["ts-node", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:10.0.0"],
+            ["ts-node", "virtual:281994f9a629235a2ed0e30e435db04dcc7e9117902d3d6edde6fe1a95f041e55fd7929ffc1ef187b257eb7ed50e0b75ea0bada2e0ebce35beda1312a1264e19#npm:10.0.0"],
             ["@swc/core", null],
             ["@swc/wasm", null],
             ["@tsconfig/node10", "npm:1.0.8"],
@@ -26539,6 +26599,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/yargs-npm-16.2.0-547873d425-b14afbb51e.zip/node_modules/yargs/",
           "packageDependencies": [
             ["yargs", "npm:16.2.0"],
+            ["cliui", "npm:7.0.4"],
+            ["escalade", "npm:3.1.1"],
+            ["get-caller-file", "npm:2.0.5"],
+            ["require-directory", "npm:2.1.1"],
+            ["string-width", "npm:4.2.2"],
+            ["y18n", "npm:5.0.8"],
+            ["yargs-parser", "npm:20.2.7"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:17.0.1", {
+          "packageLocation": "./.yarn/cache/yargs-npm-17.0.1-1d996d62b1-4ffffa5a82.zip/node_modules/yargs/",
+          "packageDependencies": [
+            ["yargs", "npm:17.0.1"],
             ["cliui", "npm:7.0.4"],
             ["escalade", "npm:3.1.1"],
             ["get-caller-file", "npm:2.0.5"],

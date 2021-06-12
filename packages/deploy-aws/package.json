@@ -1,0 +1,15 @@
+{
+  "name": "deploy-aws",
+  "main": "index.js",
+  "bin": "index.js",
+  "dependencies": {
+    "execa": "^5.1.1",
+    "ts-node": "^10.0.0",
+    "yargs": "^17.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.2",
+    "@types/yargs": "^17",
+    "typescript": "^4.3.2"
+  }
+}
