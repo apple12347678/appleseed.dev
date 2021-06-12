@@ -12248,6 +12248,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nodelib/fs.walk", "npm:1.2.7"],
             ["@pmmmwh/react-refresh-webpack-plugin", "virtual:0f95cb2eed9880d94dbcfdc6284de92ef3a33fffd22b8e795609df016647998b0c5836d75793a7ae77d44d22f46aafa44a0387220973aa65c52f303fd60956ab#npm:0.4.3"],
             ["@types/http-proxy", "npm:1.17.6"],
+            ["@types/reach__router", "npm:1.3.8"],
             ["@types/react", "npm:17.0.11"],
             ["@types/react-dom", "npm:17.0.7"],
             ["@typescript-eslint/eslint-plugin", "virtual:0f95cb2eed9880d94dbcfdc6284de92ef3a33fffd22b8e795609df016647998b0c5836d75793a7ae77d44d22f46aafa44a0387220973aa65c52f303fd60956ab#npm:4.26.1"],
@@ -12723,6 +12724,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/gatsby", null],
             ["@types/gatsby-plugin-sharp", null],
             ["@types/gatsby-source-filesystem", null],
+            ["@types/prop-types", "npm:15.7.3"],
             ["@types/react", "npm:17.0.11"],
             ["@types/react-dom", "npm:17.0.7"],
             ["babel-jsx-utils", "npm:1.1.0"],
@@ -12768,6 +12770,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/gatsby", null],
             ["@types/gatsby-plugin-sharp", null],
             ["@types/gatsby-source-filesystem", null],
+            ["@types/prop-types", "npm:15.7.3"],
             ["@types/react", "npm:17.0.11"],
             ["@types/react-dom", "npm:17.0.7"],
             ["babel-jsx-utils", "npm:1.1.0"],
@@ -12979,6 +12982,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "react-helmet"
           ],
           "linkType": "HARD",
+        }],
+        ["virtual:67334350be407b193cf2186cf648d08129d68a35c1b48349bb0094951510cb3391a8779e95b8c1c886b833a1eac4a3baa1dc8a981c0dbd235a47b0ca4f7f6030#npm:4.7.1", {
+          "packageLocation": "./.yarn/__virtual__/gatsby-plugin-react-helmet-virtual-225572ccab/0/cache/gatsby-plugin-react-helmet-npm-4.7.1-e1a37e0ab3-667db3068b.zip/node_modules/gatsby-plugin-react-helmet/",
+          "packageDependencies": [
+            ["gatsby-plugin-react-helmet", "virtual:67334350be407b193cf2186cf648d08129d68a35c1b48349bb0094951510cb3391a8779e95b8c1c886b833a1eac4a3baa1dc8a981c0dbd235a47b0ca4f7f6030#npm:4.7.1"],
+            ["@babel/runtime", "npm:7.14.5"],
+            ["@types/gatsby", null],
+            ["@types/react-helmet", null],
+            ["gatsby", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:3.7.1"],
+            ["react-helmet", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:6.1.0"]
+          ],
+          "packagePeers": [
+            "@types/gatsby",
+            "@types/react-helmet",
+            "gatsby",
+            "react-helmet"
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["gatsby-plugin-react-i18next", [
@@ -12995,7 +13016,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-plugin-react-i18next", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:1.1.1"],
             ["@types/gatsby", null],
             ["@types/i18next", null],
+            ["@types/reach__router", "npm:1.3.8"],
             ["@types/react", "npm:17.0.11"],
+            ["@types/react-helmet", "npm:6.1.1"],
             ["@types/react-i18next", null],
             ["bluebird", "npm:3.7.2"],
             ["browser-lang", "npm:0.1.0"],
@@ -14646,7 +14669,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:15.12.2"],
             ["@types/react", "npm:17.0.11"],
             ["@types/react-dom", "npm:17.0.7"],
-            ["@types/react-helmet", "npm:6.1.1"],
             ["gatsby", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:3.7.1"],
             ["gatsby-plugin-emotion", "virtual:67334350be407b193cf2186cf648d08129d68a35c1b48349bb0094951510cb3391a8779e95b8c1c886b833a1eac4a3baa1dc8a981c0dbd235a47b0ca4f7f6030#npm:6.7.1"],
             ["gatsby-plugin-graphql-codegen", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:3.0.0"],
@@ -14654,7 +14676,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-plugin-layout", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:2.7.1"],
             ["gatsby-plugin-manifest", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:3.7.1"],
             ["gatsby-plugin-mdx", "virtual:67334350be407b193cf2186cf648d08129d68a35c1b48349bb0094951510cb3391a8779e95b8c1c886b833a1eac4a3baa1dc8a981c0dbd235a47b0ca4f7f6030#npm:2.7.1"],
-            ["gatsby-plugin-react-helmet", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:4.7.1"],
+            ["gatsby-plugin-react-helmet", "virtual:67334350be407b193cf2186cf648d08129d68a35c1b48349bb0094951510cb3391a8779e95b8c1c886b833a1eac4a3baa1dc8a981c0dbd235a47b0ca4f7f6030#npm:4.7.1"],
             ["gatsby-plugin-react-i18next", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:1.1.1"],
             ["gatsby-plugin-react-svg", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:3.0.1"],
             ["gatsby-plugin-sharp", "virtual:1b518f933023f6149452e27b92295b7b7fa970c1c8447ebe72a481a9795212a9424a78a62b897ed30db7a54234c06587ea4684ded61e0272631d097f680867ff#npm:3.7.1"],

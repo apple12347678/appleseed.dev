@@ -3,7 +3,8 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "typecheck": "tsc"
   },
   "devDependencies": {
     "@babel/core": "^7.14.5",

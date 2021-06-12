@@ -123,8 +123,8 @@ const config: GatsbyConfig = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) =>
-              allMarkdownRemark.edges.map((edge) => ({
+            serialize: ({ query: { site, allMarkdownRemark } }: any) =>
+              allMarkdownRemark.edges.map((edge: any) => ({
                 ...edge.node.frontmatter,
                 description: edge.node.excerpt,
                 url: `${site.siteMetadata.site_url}${edge.node.fields.slug}`,

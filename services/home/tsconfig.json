@@ -1,5 +1,5 @@
 {
   "extends": "../../tsconfig.json",
-  "include": ["src/**/*", "gatsby/**/*", "graphql-types.ts"],
+  "include": ["src/**/*", "gatsby/**/*", "graphql-types.ts", "module.d.ts"],
   "exclude": ["src/assets/**"]
 }

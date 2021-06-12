@@ -47,7 +47,7 @@ const createPages: GatsbyNode['createPages'] = async ({
   const posts = mdResult.data.allMarkdownRemark.nodes;
 
   if (posts.length > 0) {
-    posts.forEach((post, index: number) => {
+    posts.forEach((post: any, index: number) => {
       const previousPostId = index === 0 ? null : posts[index - 1].id;
       const nextPostId =
         index === posts.length - 1 ? null : posts[index + 1].id;

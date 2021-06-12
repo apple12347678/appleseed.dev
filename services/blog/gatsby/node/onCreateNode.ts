@@ -31,7 +31,7 @@ const onCreateNode: GatsbyNode['onCreateNode'] = ({
     });
 
     const tagNodes = getNodesByType('Tag');
-    (node.frontmatter as any).tags.forEach((newTag) => {
+    (node.frontmatter as any).tags.forEach((newTag: any) => {
       const searchedTag = tagNodes.find((n) => n.name === newTag);
       if (!searchedTag) {
         createNode({

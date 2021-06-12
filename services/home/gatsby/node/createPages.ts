@@ -29,7 +29,7 @@ const createPages: GatsbyNode['createPages'] = async ({
   const resume = (result.data as any).allMdx.nodes;
 
   if (resume.length > 0) {
-    resume.forEach((r) => {
+    resume.forEach((r: any) => {
       createPage({
         path: r.slug === 'ko' ? '/resume/' : `/${r.slug}/resume/`,
         component: Resume,
