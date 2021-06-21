@@ -1,9 +1,8 @@
 import { GatsbyNode } from 'gatsby';
 
-const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = async ({
-  actions: { createTypes },
-}) => {
-  createTypes(`
+const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] =
+  async ({ actions: { createTypes } }) => {
+    createTypes(`
     type SiteSiteMetadata {
       title: String!
       author: Author!
@@ -46,6 +45,6 @@ const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = async
       name: String!
     }
   `);
-};
+  };
 
 export default createSchemaCustomization;

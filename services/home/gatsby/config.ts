@@ -15,12 +15,7 @@ const config: GatsbyConfig = {
     site_url: 'https://appleseed.dev',
   },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-graphql-codegen',
-      options: {
-        documentPaths: [`src/**/*.{ts,tsx}`, `gatsby/**/*.ts`],
-      },
-    },
+    'gatsby-plugin-typegen',
     {
       resolve: 'gatsby-plugin-typescript',
       options: {

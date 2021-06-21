@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
-import { SitePageContext } from '../../graphql-types';
 import GatsbyIcon from '../assets/gatsby.svg';
 import GithubIcon from '../assets/github.svg';
 import ReactIcon from '../assets/reacticon.svg';
@@ -75,7 +74,7 @@ const PoweredBy = styled.span`
 
 interface ILayoutProps {
   children: React.ReactNode;
-  pageContext: SitePageContext;
+  pageContext: GatsbyTypes.SitePageContext;
 }
 
 export default function Layout({

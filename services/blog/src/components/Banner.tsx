@@ -52,7 +52,6 @@ export default function Banner({ image }: IBannerProps) {
       <TextContainer>
         <Title>
           <Trans i18nKey="index.title">
-            {/* eslint-disable-next-line jsx-a11y/control-has-associated-label,jsx-a11y/anchor-has-content */}
             <a href="https://appleseed.dev" />
           </Trans>
         </Title>

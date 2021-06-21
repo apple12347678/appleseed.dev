@@ -16,10 +16,7 @@ const config: GatsbyConfig = {
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-graphql-codegen',
-      options: {
-        documentPaths: [`./src/**/*.{ts,tsx}`, `./gatsby/**/*.{ts,tsx}`],
-      },
+      resolve: 'gatsby-plugin-typegen',
     },
     'gatsby-plugin-typescript',
     {

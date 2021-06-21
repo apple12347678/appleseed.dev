@@ -1,5 +1,7 @@
 {
   "rules": {
-    "@typescript-eslint/naming-convention": "off"
+    "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/require-await": "off"
   }
 }

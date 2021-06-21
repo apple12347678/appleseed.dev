@@ -1,5 +1,3 @@
-import React from 'react';
-
 import styled from '@emotion/styled';
 import { MDXProvider } from '@mdx-js/react';
 import { graphql } from 'gatsby';
@@ -7,7 +5,6 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Link as I18nLink } from 'gatsby-plugin-react-i18next';
 
-import { ResumeQuery } from '../../graphql-types';
 import GithubIcon from '../assets/github.svg';
 import InstagramIcon from '../assets/instagram.svg';
 import LinkedInIcon from '../assets/linkedin.svg';
@@ -25,9 +22,6 @@ const Avatar = styled(GatsbyImage)`
     border-radius: 60px;
   }
 `;
-
-// function Avatar({ file }: { file: ResumeQuery['file'] }) {
-// }
 
 const Root = styled.div`
   margin-bottom: 40px;
@@ -146,13 +140,13 @@ const GoBack = styled.div`
 `;
 
 interface IResumeTemplateProps {
-  data: ResumeQuery;
+  data: GatsbyTypes.ResumeQuery;
 }
 
 export default function ResumeTemplate({
   data: { file, mdx },
 }: IResumeTemplateProps) {
-  if (!mdx) {
+  if (!mdx || !file?.childImageSharp) {
     return null;
   }
   return (
@@ -160,7 +154,7 @@ export default function ResumeTemplate({
       <SEO title="Resume" />
       <Wrapper>
         <Root>
-          <Avatar alt="avatar" image={file!.childImageSharp!.gatsbyImageData} />
+          <Avatar alt="avatar" image={file.childImageSharp.gatsbyImageData} />
           <Profile />
         </Root>
         <MDXProvider components={shortcodes}>

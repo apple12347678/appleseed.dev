@@ -1,11 +1,8 @@
-import React from 'react';
-
 import styled from '@emotion/styled';
 import { graphql, Link } from 'gatsby';
 import { Link as I18nLink } from 'gatsby-plugin-react-i18next';
 import { useTranslation } from 'react-i18next';
 
-import { SitePageContext } from '../../graphql-types';
 import { Container, SEO } from '../components';
 
 const BannerContainer = styled.div`
@@ -17,7 +14,7 @@ const Title = styled.h1`
 `;
 
 interface IHomePageProps {
-  pageContext: SitePageContext;
+  pageContext: GatsbyTypes.SitePageContext;
 }
 
 export default function HomePage({ pageContext }: IHomePageProps) {

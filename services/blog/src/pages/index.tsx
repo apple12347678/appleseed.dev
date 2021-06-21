@@ -1,11 +1,10 @@
 import { graphql } from 'gatsby';
 import { useTranslation } from 'react-i18next';
 
-import { HomeDataQuery } from '../../graphql-types';
 import { Abstract, Banner, Container, Nav, SEO } from '../components';
 
 interface IHomeProps {
-  data: HomeDataQuery;
+  data: GatsbyTypes.HomeDataQuery;
 }
 
 export default function Home({ data }: IHomeProps) {
@@ -27,7 +26,7 @@ export default function Home({ data }: IHomeProps) {
               slug={post.fields.slug}
               description={post.frontmatter.description}
               excerpt={post.excerpt || undefined}
-              date={post.frontmatter.date}
+              date={new Date(post.frontmatter.date)}
               timeToRead={post.timeToRead || 0}
               tags={post.frontmatter.tags}
             />

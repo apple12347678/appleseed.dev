@@ -75,6 +75,7 @@
     "import/order": "off",
     "import/prefer-default-export": "off",
     "prettier/prettier": "error",
+    "react/react-in-jsx-scope": "off",
     "react/jsx-indent": "off",
     "react/jsx-filename-extension": "off",
     "react/require-default-props": "off",

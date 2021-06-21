@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Global } from '@emotion/react';
 
 import { globalStyle } from '../styles/globalStyle';

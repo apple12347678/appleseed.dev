@@ -30,7 +30,7 @@ interface IAbstractProps {
   excerpt?: string;
   date: Date;
   timeToRead: number;
-  tags: string[];
+  tags: readonly string[];
 }
 
 export default function Abstract({

@@ -11,7 +11,7 @@ const TagContainerRoot = styled.div`
 `;
 
 interface ITagContainerProps {
-  tags: string[];
+  tags: readonly string[];
 }
 
 export default function TagContainer({ tags }: ITagContainerProps) {

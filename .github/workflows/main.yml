@@ -17,6 +17,7 @@ jobs:
           node-version: 14.x
       - run: yarn
       - run: yarn workspaces since run typecheck $(git rev-parse HEAD~1)
+      - run: yarn workspaces since run lint $(git rev-parse HEAD~1)
   deploy:
     needs: test
     runs-on: ubuntu-latest

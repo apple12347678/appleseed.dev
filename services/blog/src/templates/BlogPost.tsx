@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'react-i18next';
 
-import { BlogPostBySlugQuery } from '../../graphql-types';
 import { CCL, Container, Error, SEO, TagContainer } from '../components';
 
 const BlogPostTitle = styled.h1`
@@ -25,7 +24,7 @@ const BlogPostBody = styled.section`
 `;
 
 interface IBlogPostTemplateProps {
-  data: BlogPostBySlugQuery;
+  data: GatsbyTypes.BlogPostBySlugQuery;
 }
 
 export default function BlogPostTemplate({

@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'react-i18next';
 
-import { HomeDataQuery } from '../../graphql-types';
 import { Abstract, Container, Nav, SEO } from '../components';
 
 const Title = styled.h1`
@@ -12,7 +11,7 @@ const Title = styled.h1`
 
 interface IPageTemplateProps {
   pageContext: {
-    posts: HomeDataQuery['allMarkdownRemark']['nodes'];
+    posts: GatsbyTypes.HomeDataQuery['allMarkdownRemark']['nodes'];
     pageIndex: number;
     isLastPage: boolean;
   };
@@ -37,7 +36,7 @@ export default function PageTemplate({
               slug={post.fields.slug}
               description={post.frontmatter.description}
               excerpt={post.excerpt || undefined}
-              date={post.frontmatter.date}
+              date={new Date(post.frontmatter.date)}
               timeToRead={post.timeToRead || 0}
               tags={post.frontmatter.tags}
             />

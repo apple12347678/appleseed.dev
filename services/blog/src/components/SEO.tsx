@@ -1,8 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet, useI18next } from 'gatsby-plugin-react-i18next';
 
-import { SeoDataQuery } from '../../graphql-types';
-
 type TMetaProps = React.DetailedHTMLProps<
   React.MetaHTMLAttributes<HTMLMetaElement>,
   HTMLMetaElement
@@ -14,7 +12,7 @@ interface ISEOProps {
 }
 
 export default function SEO({ title, meta = [] }: ISEOProps) {
-  const { site }: SeoDataQuery = useStaticQuery(
+  const { site } = useStaticQuery<GatsbyTypes.SEODataQuery>(
     graphql`
       query SEOData {
         site {
